@@ -4,6 +4,7 @@ Participantes:
 Davi Armando Lira Sales
 Bianca Vilas Boas
 Bruna Vilas Boas
+Geovanna Calixto
 Letícia Ribeiro dos Santos
 Mateus Furtado Rodrigues
 """

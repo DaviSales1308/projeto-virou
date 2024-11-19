@@ -9,7 +9,7 @@ Este projeto tem como objetivo promover a conscientização sobre o descarte cor
 - **Cadastro de Empresas de Reciclagem:**  
   Permite registrar empresas que realizam a coleta e reciclagem de vidro.
 
-- **Mapa de Locais de Descarte:**  
+- **Informações de Locais de Descarte:**  
   Mostra pontos de descarte próximos para facilitar a contribuição com a reciclagem.
 
 - **Tutorial de Descarte Correto:**  

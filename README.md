@@ -45,6 +45,7 @@ pip install flask
 ````bash
 pip install flask-sqlalchemy
 ````
+---
 
 ## 📌 **Como Usar**
 

@@ -90,10 +90,4 @@ Para contribuir:
 
 ---
 
-## 📄 **Licença**
-
-Este projeto está licenciado sob a **MIT License**. Consulte o arquivo `LICENSE` para mais informações.
-
----
-
 Se quiser ajustar algo, é só dizer! 😊

@@ -29,6 +29,23 @@ Este projeto tem como objetivo promover a conscientização sobre o descarte cor
 
 ---
 
+## 📚**Bibliotecas Necessárias**
+
+- **Flask**
+  - Framework para criar e gerenciar o servidor web e as rotas.
+  Comando de instalação:
+
+```bash
+pip install flask
+````
+- **Flask-SQLAlchemy**
+  - Extensão para integração do Flask com bancos de dados usando SQLAlchemy.
+  Comando de instalação:
+
+````bash
+pip install flask-sqlalchemy
+````
+
 ## 📌 **Como Usar**
 
 1. **Clone o repositório:**

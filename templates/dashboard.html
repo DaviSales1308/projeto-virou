@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo(a), {{ username }}</h1> <!--Formatação de String -->
+        
+        <h2>Empresas Cadastradas:</h2>
+        <ul>
+            {% for empresa in empresas %} <!--Estrutura de repetição -->
+                <li>{{ empresa.nome }} - {{ empresa.endereco }}</li> <!--Formatação de String -->
+            {% else %}
+                <p>Nenhuma empresa cadastrada.</p>
+            {% endfor %}
+        </ul>
+        
+        <h2>Locais de Reciclagem:</h2>
+        <ul>
+            {% for local in locais %} <!--Estrutura de repetição -->
+                <li>{{ local.endereco }}</li> <!--Formatação de String -->
+            {% else %}
+                <p>Nenhum local de reciclagem cadastrado.</p>
+            {% endfor %}
+        </ul>
+        
+        <ul>
+            {% if session.get('is_admin') %}
+            <li><a href="/gerenciar_empresas" class="button-link">Gerenciar Empresas</a></li>
+            <li><a href="/gerenciar_locais" class="button-link">Gerenciar Locais de Reciclagem</a></li>
+            {% endif %}
+            <li><a href="/tutorial_vidro" class="button-link">Tutorial de Descarte Correto do Vidro</a></li>
+            <li><a href="/" class="button-link">Sair</a></li>
+        </ul>
+    </div>
+</body>
+</html>

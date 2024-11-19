@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Empresas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciar Empresas</h1>
+        <ul>
+            {% for empresa in empresas %}
+                <li>
+                    <form action="/gerenciar_empresas" method="POST" class="form">
+                        <input type="hidden" name="empresa_id" value="{{ empresa.id }}">
+                        <input type="text" name="nome" value="{{ empresa.nome }}" class="input-text" required>
+                        <input type="text" name="endereco" value="{{ empresa.endereco }}" class="input-text" required>
+                        <button type="submit" name="edit_empresa" class="button">Editar</button>
+                        <button type="submit" name="delete_empresa" class="button button-link-back">Excluir</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <h2>Adicionar Nova Empresa</h2>
+        <form action="/gerenciar_empresas" method="POST" class="form">
+            <input type="text" name="nome" placeholder="Nome da Empresa" class="input-text" required>
+            <input type="text" name="endereco" placeholder="Endereço da Empresa" class="input-text" required>
+            <button type="submit" name="add_empresa" class="button">Adicionar Empresa</button>
+        </form>
+        <a href="/dashboard" class="button-link-back">Voltar</a>
+    </div>
+</body>
+</html>

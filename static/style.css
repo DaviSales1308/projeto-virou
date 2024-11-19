@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(green, black);
+   /* background-image: url(/static/images/nature_13640986.png);
+    background-size: 103px;*/
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body img{
+    width: 10%;
+    height: 10%;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(180, 180, 180, 0.7);
+    border-radius: 8px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+    object-fit: contain;
+    overflow: auto;
+}
+
+#tut{
+    width: 100%;
+    object-fit: contain;
+    overflow: auto;
+    height: 600px;
+}
+
+h1, h2 {
+    color: #2b2d30;
+    margin-bottom: 20px;
+    text-decoration: solid;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Centralizar conteúdo da lista e links */
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    width: 100%;
+}
+
+/* Estilo de botão para links */
+a.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #186e15;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+}
+
+a.button-link:hover {
+    background-color: #000000;
+}
+
+/* Estilo para os botões de voltar */
+a.button-link-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;  /* Cor diferenciada para "Voltar" */
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+a.button-link-back:hover {
+    background-color: #000000;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #186e15;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #000000;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Locais de Reciclagem</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciar Locais de Reciclagem</h1>
+        <ul>
+            {% for local in locais %}
+                <li>
+                    <form action="/gerenciar_locais" method="POST" class="form">
+                        <input type="hidden" name="local_id" value="{{ local.id }}">
+                        <input type="text" name="endereco" value="{{ local.endereco }}" class="input-text" required>
+                        <input type="text" name="material" value="{{ local.material }}" class="input-text" required>
+                        <button type="submit" name="edit_local" class="button">Editar</button>
+                        <button type="submit" name="delete_local" class="button button-link-back">Excluir</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <h2>Adicionar Novo Local de Reciclagem</h2>
+        <form action="/gerenciar_locais" method="POST" class="form">
+            <input type="text" name="endereco" placeholder="Endereço do Local" class="input-text" required>
+            <input type="text" name="material" placeholder="Nome do Local" class="input-text" required>
+            <button type="submit" name="add_local" class="button">Adicionar Local</button>
+        </form>
+        <a href="/dashboard" class="button-link-back">Voltar</a>
+    </div>
+</body>
+</html>
